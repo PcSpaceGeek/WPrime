@@ -1,0 +1,33 @@
+﻿<Window x:Name="WPrime" x:Class="WPrime.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WPrime"
+        mc:Ignorable="d"
+        Title="WPrime" Height="454" Width="800" ResizeMode="CanMinimize">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+        <Label x:Name="label" Content="This program can find all prime numbers between two given numbers.&#xA;&#xA;These numbers should be given in the form of: a * 10 ^ b.&#xA;The biggest calculable number is 1 * 10 ^ 16.&#xA;&#xA;Please specify the parameters for the starting number:&#x9; a:&#xA;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9; b:&#xA;&#xA;Please specify the parameters for the ending number:&#x9; a:&#xA;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9; b:" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" Width="436"/>
+        <TextBox x:Name="textBox_1a" HorizontalAlignment="Left" Height="23" Margin="326,93,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120"/>
+        <TextBox x:Name="textBox_1b" HorizontalAlignment="Left" Height="23" Margin="326,125,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120"/>
+        <TextBox x:Name="textBox_2a" HorizontalAlignment="Left" Height="23" Margin="326,157,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120"/>
+        <TextBox x:Name="textBox_2b" HorizontalAlignment="Left" Height="23" Margin="326,188,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120"/>
+        <Button x:Name="CalculateButton" Content="Calculate" HorizontalAlignment="Left" Margin="120,338,0,0" VerticalAlignment="Top" Width="75" Click="CalculateButtonClick"/>
+        <Label x:Name="label1" Content="Nr. of cores to be used for the calculations:" HorizontalAlignment="Left" Margin="10,237,0,0" VerticalAlignment="Top"/>
+        <ComboBox x:Name="CPUcomboBox" HorizontalAlignment="Left" Margin="257,241,0,0" VerticalAlignment="Top" Width="50"/>
+        <TextBox x:Name="textBox1" HorizontalAlignment="Left" Height="347" Margin="461,11,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="308" VerticalScrollBarVisibility="Auto"/>
+        <Canvas HorizontalAlignment="Left" Height="25" Margin="11,381,0,0" VerticalAlignment="Top" Width="762">
+            <ProgressBar x:Name="progressBar" HorizontalAlignment="Left" Height="25" VerticalAlignment="Top" Width="762" Panel.ZIndex="0"/>
+            <Label x:Name="progresslabel" Content="0.00%" HorizontalAlignment="Center" VerticalAlignment="Center" Width="50" Height="25" Canvas.Left="356"/>
+        </Canvas>
+        <Button x:Name="cancelButton" Content="Cancel" HorizontalAlignment="Left" Margin="232,338,0,0" VerticalAlignment="Top" Width="75" IsEnabled="False" Click="CancelButtonClick"/>
+        <CheckBox x:Name="checkBox" Content="Save the resulting files in a folder named after the current date and time." HorizontalAlignment="Left" Margin="10,279,0,0" VerticalAlignment="Top" IsChecked="True"/>
+
+    </Grid>
+</Window>
